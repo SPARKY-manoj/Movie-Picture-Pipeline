@@ -7,7 +7,7 @@ from .movies import movies_api
 app = Flask(__name__)
 CORS(app)
 app.register_blueprint(movies_api)
-
+# Backend CI workflow verification
 # Start app
 if __name__ == "__main__":
     app.run(
@@ -16,4 +16,3 @@ if __name__ == "__main__":
         port=int(os.getenv("FLASK_RUN_PORT", 5000)),
     )
 
-# Backend CI workflow verification
